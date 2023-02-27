@@ -40,7 +40,9 @@ Color bodycolor = new Color(255,204,153);
         reportspane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         maindesktop = new javax.swing.JDesktopPane();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -135,15 +137,24 @@ Color bodycolor = new Color(255,204,153);
 
         header.setBackground(new java.awt.Color(153, 0, 0));
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel5.setText("THIS PROGRAM IS INTENDED FOR GOVERNMENT USE ONLY");
+
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
         headerLayout.setHorizontalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addContainerGap(79, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(70, 70, 70))
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addContainerGap())
         );
 
         jPanel1.add(header);
@@ -151,15 +162,25 @@ Color bodycolor = new Color(255,204,153);
 
         maindesktop.setBackground(new java.awt.Color(255, 204, 153));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/download-removebg-preview.png"))); // NOI18N
+
+        maindesktop.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
         maindesktop.setLayout(maindesktopLayout);
         maindesktopLayout.setHorizontalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(maindesktopLayout.createSequentialGroup()
+                .addGap(242, 242, 242)
+                .addComponent(jLabel4)
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         maindesktopLayout.setVerticalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
+            .addGroup(maindesktopLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jLabel4)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         jPanel1.add(maindesktop);
@@ -255,6 +276,8 @@ Color bodycolor = new Color(255,204,153);
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
